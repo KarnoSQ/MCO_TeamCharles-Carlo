@@ -69,5 +69,29 @@ public class MainMenuView {
 
         this.mainFrame.setVisible(true);
     }
+
+	public void setInvntryBtnListener(ActionListener actionListener){
+
+        this.invBtn.addActionListener(actionListener);
+
+    }
+
+    	public void setExplrBtnListener(ActionListener actionListener){
+
+        this.explrBtn.addActionListener(actionListener);
+
+    }
+
+   	public void setEvolBtnListener(ActionListener actionListener){
+
+        this.EvoBtn.addActionListener(actionListener);
+
+    }
+
+    	public void setExitBtnListener(ActionListener actionListener){
+
+        this.ExtBtn.addActionListener(actionListener);
+
+    }
     
 }
