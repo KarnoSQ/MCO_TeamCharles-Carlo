@@ -1,7 +1,7 @@
 import java.util.Random;
 
 
-public class Area {
+public abstract class Area {
     protected int current_area;
     protected int row;
     protected int column;
@@ -25,13 +25,12 @@ public class Area {
         Random rand = new Random();
         return rand.nextInt(0, 100) <= 40;
     }
-   /* private Creatures YieldACreature(){
+    private Creatures YieldACreature(){
         CreatureFactory cf = new  CreatureFactory();
         return cf.makenewCreature(current_area);
-    }*/
-
-   /*public BattleOrder encounters(){
+    }
+   public BattleOrder encounters(){
        return new BattleOrder(player.inven,YieldACreature());
-   }*/
+   }
 
 }
