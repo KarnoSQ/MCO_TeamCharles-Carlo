@@ -1,4 +1,3 @@
-import java.util.Iterator;
 import java.util.Objects;
 public class EvolutionFactory extends CreatureFactory{
     EvolutionFactory(){
@@ -6,11 +5,9 @@ public class EvolutionFactory extends CreatureFactory{
     }
     public Creatures makenewCreature(String type,char family,int evolution) {
         try{
-           Iterator<CreatureInfo> itr = features.iterator();
-            while(itr.hasNext()){
-                CreatureInfo cr = itr.next();
-                if(cr.getFamily()==family  && Objects.equals(cr.getType(), type) &&
-                        cr.getEvo()==(evolution+1)){
+            for (CreatureInfo cr : features) {
+                if (cr.getFamily() == family && Objects.equals(cr.getType(), type) &&
+                        cr.getEvo() == (evolution + 1)) {
                     return new Creatures(cr);
                 }
             }
