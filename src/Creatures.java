@@ -5,16 +5,13 @@ public class Creatures {
     this.identity=ci;
     }
     public boolean isStronger(String E){
-    if(identity.getType()=="Fire"&& E == "Grass"){
+    if(identity.getType().equals("Fire") && E.equals("Grass")){
         return true;
     }
-    else if(identity.getType()=="Water"&& E == "Fire"){
+    else if(identity.getType().equals("Water") && E.equals("Fire")){
             return true;
     }
-    else if(identity.getType()=="Grass"&& E == "Water"){
-        return true;
-    }
-    else return false;
+    else return identity.getType().equals("Grass") && E.equals("Water");
     }
     public CreatureInfo getIdentity() {
         return identity;

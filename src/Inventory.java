@@ -5,6 +5,10 @@ public class Inventory {
     Inventory(){
 
     }
+
+    public ArrayList<Creatures> getCreaturelist() {
+        return creaturelist;
+    }
     public boolean setAc(int index) {
         try{
             ac=(ActiveCreature)creaturelist.get(index);
@@ -45,5 +49,9 @@ public class Inventory {
             //Charles Make a no Pokémon found in inventory gui
             return false;
         }
+    }
+
+    public void setCreaturelist(int index, Creatures  creature) {
+        this.creaturelist.set(index,creature);
     }
 }
