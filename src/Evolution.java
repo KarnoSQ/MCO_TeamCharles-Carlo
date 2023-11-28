@@ -1,20 +1,34 @@
 import java.util.Iterator;
+/**Represents an Evolution
+ * @author Carlo San Buenaventura
+ * @version 1.0
+ *
+ */
 public class Evolution {
     private Inventory inven;
-    EvolutionFactory ev;
+    private EvolutionFactory ev =  new EvolutionFactory();
+
+    /**
+     * Default Constructor
+     * @param inven players inventory
+     */
     public Evolution(Inventory inven) {
         this.inven = inven;
     }
 
-    public Creatures CreateEvolution(int index1, int index2) {
+    /**
+     * Creates evolution
+     * @param index1 index of first creature
+     * @param index2 index of second creature
+     * @return Evolved Creature
+     */
+    public Creatures CreateEvolution(int index1, int index2) throws InvalidCreature {
        try{
            if (canevolve(index1, index2)) {
                Creatures c1=inven.getCreature(index1);
-               Creatures c2=inven.getCreature(index2);
                inven.setCreaturelist(index1, null);
                inven.setCreaturelist(index2, null);
                Iterator<Creatures> ct = inven.getCreaturelist().iterator();
-
                // Loop through a collection
                int i = 0;
                while (ct.hasNext()) {
@@ -29,10 +43,16 @@ public class Evolution {
                throw new IllegalArgumentException();
        }catch(IllegalArgumentException e){
            //Charles make a message here idk
-           throw new IllegalArgumentException();
+           throw new InvalidCreature("Creature Not Found");
        }
     }
 
+    /**
+     *  Checks if player can Evolve Creature
+     * @param index1 index of the first creature
+     * @param index2 index of the second creature
+     * @return true or false if creature can evolve
+     */
 
         private boolean canevolve ( int index1, int index2){
             try {

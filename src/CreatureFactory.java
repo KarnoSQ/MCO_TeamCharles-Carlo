@@ -1,11 +1,18 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
+/**Represents Creature creation
+ * @author Carlo San Buenaventura
+ * @version 1.0
+ *
+ */
 
 public class CreatureFactory {
    protected ArrayList<CreatureInfo> features= new ArrayList<>();
 
+    /**
+     * Creates List of Creatures
+     */
    protected void CreateList(){
        features.add(new CreatureInfo("Strawalander","Fire",1,'A'));
        features.add(new CreatureInfo("Chocowool","Fire",1,'B'));
@@ -37,10 +44,19 @@ public class CreatureFactory {
        features.add(new CreatureInfo("Icesundae","Water",3,'H'));
        features.add(new CreatureInfo("Samurcone","Water",3,'I'));
    }
+
+    /**
+     * Default Constructor
+     */
     CreatureFactory(){
         CreateList();
     }
 
+    /**
+     * makes new Creatures
+     * @param currentarea current area of the player
+     * @return new Creature
+     */
     public Creatures makenewCreature(int currentarea) {
       try{
           Random rand= new Random();

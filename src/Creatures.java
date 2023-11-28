@@ -1,6 +1,15 @@
+/**Represents a Creature
+ * @author Carlo San Buenaventura
+ * @version 2.0
+ *
+ */
 public class Creatures {
     private CreatureInfo identity;
 
+    /**
+     * Default Constructor
+     * @param ci information of the creatures
+     */
     public Creatures(CreatureInfo ci){
     this.identity=ci;
     }
