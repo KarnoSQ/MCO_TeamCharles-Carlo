@@ -4,9 +4,7 @@
  *
  */
 public class BattleOrder extends BattleInfo{
-    private Creatures enemy;
-    private Creatures player;
-    private Inventory inven;
+
     private int turns = 3;
 
     /**

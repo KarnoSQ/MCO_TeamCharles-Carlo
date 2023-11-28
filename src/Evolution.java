@@ -54,7 +54,7 @@ public class Evolution {
      * @return true or false if creature can evolve
      */
 
-        private boolean canevolve ( int index1, int index2){
+        private boolean canevolve (int index1, int index2){
             try {
                 return((inven.getCreaturelist().get(index1) == inven.getCreaturelist().get(index1))&&inven.getCreaturelist().get(index1).getIdentity().getEvo()<3);
             } catch (Exception e) {

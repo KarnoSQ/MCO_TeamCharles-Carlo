@@ -73,10 +73,11 @@ public class CreatureFactory {
                   List<CreatureInfo> area3 = features.stream().filter(q -> q.getEvo() <= 3).toList();
                   return new Creatures(area3.get(rand.nextInt(0, area3.size() - 1)));
               }
+              default ->
+              {throw new Exception();}
           }
       }catch(Exception e){
           throw new ClassCastException();
       }
-        return null;
     }
 }
