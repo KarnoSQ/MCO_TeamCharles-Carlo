@@ -50,4 +50,12 @@ public class Player {
     public void setY(int y) {
         this.y = y;
     }
+
+    /**
+     * resets location
+     */
+    public void reset(){
+        this.x=0;
+        this.y=0;
+    }
 }
