@@ -4,7 +4,6 @@
  *
  */
 public class Player {
-
     Inventory inven;
     private int x=0;
     private int  y=0;
@@ -45,8 +44,8 @@ public class Player {
     }
 
     /**
-     * column location of player
-     * @param y
+     *
+     * @param y column location of player
      */
     public void setY(int y) {
         this.y = y;
