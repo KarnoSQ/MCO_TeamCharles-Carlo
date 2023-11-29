@@ -1,6 +1,8 @@
+package GuiMCO;
+
 /**Represents area2
  * @author Carlo San Buenaventura
- * @version 1.0
+ * @version 1.1
  *
  */
 public class Area2 extends Area1{
@@ -9,8 +11,8 @@ public class Area2 extends Area1{
      */
     public Area2(){
         this.current_area=2;
-        this.row=4;
-        this.column=4;
+        this.row=2;
+        this.column=2;
     }
 
     /**
@@ -18,10 +20,10 @@ public class Area2 extends Area1{
      * @param y column location of player
      * @return new location
      */
-    public int moveup(int y){
+    public int moveUp(int y){
         try{
-            if(1+y<=row){
-                return y+1;
+            if(1 - y<=row){
+                return y - 1;
             }
             else throw new InvalidRangeException("Cant Move Here");
         }
@@ -35,10 +37,10 @@ public class Area2 extends Area1{
      * @param y column location of player
      * @return new location
      */
-    public int movedown(int y){
+    public int moveDown(int y){
         try{
-            if(y-1<=row && y-1>=0){
-                return y-1;
+            if(y + 1<=row && y + 1>=0){
+                return y + 1;
             }
             else throw new InvalidRangeException("Cant Move Here");
         }
