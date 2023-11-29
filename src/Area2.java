@@ -1,5 +1,3 @@
-package GuiMCO;
-
 /**Represents area2
  * @author Carlo San Buenaventura
  * @version 1.1
