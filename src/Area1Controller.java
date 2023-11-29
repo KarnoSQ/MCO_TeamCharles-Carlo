@@ -39,7 +39,9 @@ public class Area1Controller{
 
                     if(area.hasRandomEncounters()){
 
-                        area.encounters();
+                        BattleScreenModel battleScreenModel = new BattleScreenModel();
+                        BattleScreenView battleScreenView = new BattleScreenView();
+                        BattleScreenController battleScreen = new BattleScreenController(battleScreenView, battleScreenModel,  area.encounters(player.inven));
 
                     }
 
@@ -67,7 +69,9 @@ public class Area1Controller{
                     
                     if(area.hasRandomEncounters()){
 
-                        area.encounters();
+                        BattleScreenModel battleScreenModel = new BattleScreenModel();
+                        BattleScreenView battleScreenView = new BattleScreenView();
+                        BattleScreenController battleScreen = new BattleScreenController(battleScreenView, battleScreenModel,  area.encounters(player.inven));
 
                     }
                     
