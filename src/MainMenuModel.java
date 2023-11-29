@@ -1,5 +1,3 @@
-package GuiMCO;
-
 public class MainMenuModel {
 
     private String option;
