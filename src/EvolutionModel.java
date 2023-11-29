@@ -1,5 +1,3 @@
-package GuiMCO;
-
 import java.util.ArrayList;
 
 public class EvolutionModel {
