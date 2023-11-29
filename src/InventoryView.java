@@ -1,5 +1,3 @@
-package GuiMCO;
-
 import javax.swing.*;
 
 import java.awt.BorderLayout;
