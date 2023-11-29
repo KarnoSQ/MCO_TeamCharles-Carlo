@@ -1,6 +1,8 @@
+package GuiMCO;
+
 /**Represents area3
  * @author Carlo San Buenaventura
- * @version 1.0
+ * @version 1.1
  *
  */
 public class Area3 extends Area2{
@@ -9,7 +11,7 @@ public class Area3 extends Area2{
      */
     public Area3(){
         this.current_area=3;
-        this.row=5;
-        this.column=5;
+        this.row=3;
+        this.column=3;
     }
 }
