@@ -7,11 +7,15 @@ public class BattleScreenController {
 
     private BattleScreenModel model;
     private BattleScreenView view;
+    private BattleOrder battleOrder;
 
-    public BattleScreenController(BattleScreenView view, BattleScreenModel model){
+    public BattleScreenController(BattleScreenView view, BattleScreenModel model, BattleOrder battleOrder){
 
         this.view = view;
         this.model = model;
+        this.battleOrder = battleOrder;
+        
+
 
         this.view.setAtkBtnListener(new ActionListener() {
 
@@ -19,7 +23,7 @@ public class BattleScreenController {
 
             public void actionPerformed(ActionEvent e){
 
-                //perform atk
+                battleOrder.Attack();
 
             }
 
@@ -31,7 +35,7 @@ public class BattleScreenController {
 
             public void actionPerformed(ActionEvent e){
 
-                //perform swap
+                battleOrder.Swap(0);
 
             }
 
@@ -43,7 +47,7 @@ public class BattleScreenController {
 
             public void actionPerformed(ActionEvent e){
 
-                //perform catch
+                battleOrder.Catch();
 
             }
 
@@ -55,7 +59,7 @@ public class BattleScreenController {
 
             public void actionPerformed(ActionEvent e){
 
-                //perform run
+                battleOrder.runsaway();
 
             }
 
